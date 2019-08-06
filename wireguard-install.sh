@@ -156,3 +156,9 @@ sysctl --system
 
 systemctl start "wg-quick@$SERVER_WG_NIC"
 systemctl enable "wg-quick@$SERVER_WG_NIC"
+
+#Display QR code for iPhone
+apt install qrencode -fy
+$HOME/$SERVER_WG_NIC-client.conf
+qrencode -t ansiutf8 < $HOME/$SERVER_WG_NIC-client.conf
+
