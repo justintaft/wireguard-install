@@ -60,11 +60,12 @@ read -rp "Client's WireGuard IPv4 " -e -i "$CLIENT_WG_IPV4" CLIENT_WG_IPV4
 CLIENT_WG_IPV6="fd42:42:42::2"
 read -rp "Client's WireGuard IPv6 " -e -i "$CLIENT_WG_IPV6" CLIENT_WG_IPV6
 
-# Adguard DNS by default
-CLIENT_DNS_1="176.103.130.130"
+#Use Cloudflare DNS as pimary
+CLIENT_DNS_1="1.1.1.1"
 read -rp "First DNS resolver to use for the client: " -e -i "$CLIENT_DNS_1" CLIENT_DNS_1
 
-CLIENT_DNS_2="176.103.130.131"
+#Use Google DNS as secondary
+CLIENT_DNS_2="8.8.8.8"
 read -rp "Second DNS resolver to use for the client: " -e -i "$CLIENT_DNS_2" CLIENT_DNS_2
 
 # Ask for pre-shared symmetric key
